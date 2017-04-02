@@ -1,0 +1,107 @@
+* {
+	box-sizing: border-box;
+	background-color: pink;
+	font-family: arial;
+
+}
+
+.box {
+	height: 200px;
+	text-align: center;
+	padding-top: 30px;
+	color: white;
+}
+
+.row {
+	max-width: 1000px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 0 auto;
+}
+
+main {
+  padding-top: 100px;
+}
+
+main .row {
+	margin-bottom: 30px;
+}
+
+.orange {
+	background-color: orange;
+}
+
+.green {
+	background-color: green;
+}
+
+.blue {
+	background-color: blue;
+}
+
+.black {
+	background-color: black;
+}
+
+
+
+/*clearfix*/
+.row::before,
+.row::after {
+	display: table;
+	content: '';
+}
+
+.row::after {
+	clear: both;
+}
+	/*	
+
+	Each ROW in the grid consists of 12 COLUMN. 
+	Each COLUMN is 60px wide, and COLUMNS are separated by 20px gutters. 
+	So, 12 total COLUMNS with gutters is 
+		(12 * 60 + 12 * 20 = 960px wide)
+	You now have twelve 60px columns, and 12 20px gutters.
+
+	1 column / max row width (60/960 = 0.0625)
+	which means that the width of a single column is 6.25% of its parent row.
+
+	*/
+
+/*Gutters*/
+
+	/*	12 columns
+		gutter = 20px
+	  	half a gutter = 10px
+	  	10/960 = 1.041666%		
+	 */
+
+	.col-3, .col-4, .col-6, .col-12 {
+		float: left;
+		padding-left: 1.04166666%;
+		padding-right: 1.04166666%;
+	}
+
+.col-3, .col-4, .col-6, .col-12 {
+	width: 100%;
+}
+
+@media only screen and (min-width: 640px){
+
+	.col-3 {
+		width: 25%
+	}
+
+	.col-4 {
+		width: 33.33%;
+	}
+
+	.col-6 {
+		width: 50%;
+	}
+
+	.col-12 {
+		width: 100%;
+	}
+
+}

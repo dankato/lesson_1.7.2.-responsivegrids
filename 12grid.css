@@ -1,0 +1,109 @@
+body {
+	box-sizing: border-box;
+	font-family: arial;
+	padding: 0;
+	margin: 0;
+	background-color: gold;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+.grid {
+	width: 100%;
+	max-width: 1100px;
+	margin: 0 auto; /*left right*/ 
+}
+
+.grid:before,
+.grid:after,
+.row:before,
+.row:after {
+	content: " ";
+	display: table;
+}
+
+.grid:after,
+.row:after {
+	clear: both; /*(they will never overlap each other)*/
+}
+
+/*review this again*/
+[class*="col-"] {
+	width: 100%;
+	float: left;
+	min-height: 1px;
+}
+
+
+.col {
+	padding: 1em;
+	margin: 8px;
+	background-color: white;
+	border-radius: 3px;
+	box-shadow: 0 1px 1px gray;
+	color: blue;
+	text-align: center;
+}
+
+/*use this website to calculate the rounded number value calculatorsoup.com*/
+
+/*if the grid width is 100% and you have 12 columns, 100/12 * the current select column which is 1, so 100/12*1=8.33333 (only keep 5 digits after .)  */
+
+/*same formula above but multiply by 2 since there are now 2 columns*/
+
+
+@media screen and (min-width: 320px) {
+	.col-wide-1 {width: 8.33333%;}
+	.col-wide-2 {width: 16.66667%;}
+	.col-wide-3 {width: 25%;}
+	.col-wide-4 {width: 33.33333%;}
+	.col-wide-5 {width: 41.66667%;}
+	.col-wide-6 {width: 50%;}
+	.col-wide-7 {width: 58.33333%;}
+	.col-wide-8 {width: 66.66667%;}
+	.col-wide-9 {width: 75%;}
+	.col-wide-10 {width: 83.33333%;}
+	.col-wide-11 {width: 91.66667%;}
+	.col-wide-12 {width: 100%;}
+}
+
+@media screen and (min-width: 640px) {
+	.col-med-1 {width: 8.33333%;}
+	.col-med-2 {width: 16.66667%;}
+	.col-med-3 {width: 25%;}
+	.col-med-4 {width: 33.33333%;}
+	.col-med-5 {width: 41.66667%;}
+	.col-med-6 {width: 50%;}
+	.col-med-7 {width: 58.33333%;}
+	.col-med-8 {width: 66.66667%;}
+	.col-med-9 {width: 75%;}
+	.col-med-10 {width: 83.33333%;}
+	.col-med-11 {width: 91.66667%;}
+	.col-med-12 {width: 100%;}
+}
+
+@media screen and (min-width: 960px) {
+	.col-small-1 {width: 8.33333%;}
+	.col-small-2 {width: 16.66667%;}
+	.col-small-3 {width: 25%;}
+	.col-small-4 {width: 33.33333%;}
+	.col-small-5 {width: 41.66667%;}
+	.col-small-6 {width: 50%;}
+	.col-small-7 {width: 58.33333%;}
+	.col-small-8 {width: 66.66667%;}
+	.col-small-9 {width: 75%;}
+	.col-small-10 {width: 83.33333%;}
+	.col-small-11 {width: 91.66667%;}
+	.col-small-12 {width: 100%;}
+}
+
+
+
+
+
+
+
